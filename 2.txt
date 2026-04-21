@@ -1,0 +1,96 @@
+Svelte - 02. Props, Events & Condities
+Due November 21, 2025 12:00 PM
+Svelte (Laravel frontend)
+Instructions
+In deze opdracht leer je hoe componenten informatie van buiten ontvangen via props, en hoe je kunt reageren op gebruikersacties met eventhandlers. Daarnaast leer je renderlogica toe te passen met onder andere if, each en else.
+
+
+
+🎯 Leerdoelen
+
+Na deze opdracht:
+
+Kun je werken met componenten, props en reactiviteit in Svelte.
+Kun je data dynamisch weergeven op basis van invoer.
+
+
+📘 Samenvatting van de theorie
+
+Een rune is een speciale functie in Svelte die begint met een $-teken. Die zorgt ervoor dat bepaalde dingen automatisch reageren als er iets verandert — zoals bij reactieve variabelen, props of stores.
+
+Een rune lijkt op een functie, maar is het niet echt.
+
+
+
+De state (de gegevens die je bijhoudt) reageert niet alleen als je er iets nieuws aan toewijst met =, maar ook als er binnenin het object zelf iets verandert.
+
+Dat heet diepe reactiviteit (deep reactivity).
+
+
+
+Svelte gebruikt hiervoor iets wat proxies heet. Dat betekent dat als je iets aanpast aan zo’n proxy, het originele object niet direct verandert, maar Svelte merkt die verandering wel op.
+
+
+
+Kort gezegd: in Svelte reageert een $state-waarde ook op aanpassingen binnen objecten of arrays, en dus niet alleen als je de hele variabele opnieuw een waarde geeft.
+
+
+
+Om tijdens het programmeren makkelijk te zien wat er in een variabele zit, gebruik je
+
+$inspect.
+
+
+
+$props: zijn de “instellingen” of gegevens die je meegeeft aan een component.
+
+Spreaded props: laat je meerdere props tegelijk doorgeven met ..., zonder ze allemaal apart te typen.
+
+Met $derived maak je een automatische variabele die wordt berekend op basis van andere waarden. Als de basis verandert, verandert de afgeleide waarde vanzelf mee.
+
+#if, else, :continue: Gebruik je om iets alleen te laten zien als aan een voorwaarde wordt voldaan.
+
+#each: Een manier om door een lijst te gaan en voor elk item iets te tonen (zoals een rijtje kaarten of namen).
+
+#await promise: Laat zien wat er moet gebeuren terwijl je wacht op data (zoals van een API), als het klaar is, of als er een fout is.
+
+
+
+📝 Instructie – Learn omgeving
+
+Bestudeer en maak de hoofdstukken ‘Reactivitiy’, ‘Props’, ‘Logic’ en ‘Events’ https://svelte.dev/tutorial/svelte/state t/m
+
+https://svelte.dev/tutorial/svelte/spreading-events
+
+
+
+📝 Instructie – Praktijkopdracht
+
+Je gaat een interactieve takenlijst maken met componenten, props en event-handling.
+
+Werk verder in je SVLT01 map uit de vorige opdracht.
+
+Maak een TaskList.svelte component waarin je een lijst met taken toont.
+Toon de lijst op de homepage.
+Iedere taak is een eigen TaskItem.svelte component.
+Gebruik props om taakdata door te geven.
+Voeg een knop toe om een taak als "afgerond" te markeren.
+Laat alleen open taken zien of toon anders een melding ("Alles is gedaan!").
+Gebruik spreaded $props voor de taakdata
+Gebruik $inspect om data te loggen in de console
+Gebruik #if en #each.
+
+
+📤 Inleveren
+
+Screenshot van je voortgang in de tutorial.
+Screenshot van de werkende applicatie.
+Link naar de repository met daarin de uitwerking van de opdracht.
+✅ Voorwaarden
+
+Screenshot van je voortgang in de tutorial is ingeleverd en laat zien dat je de hoofdstukken Reactivity, Props, Logic en Events hebt afgerond.
+De repository is gecloned en de opdracht is gepusht.
+De gevraagde componenten zijn toegevoegd en werken zoals gevraagd.
+Er is gebruik gemaakt van spreaded $props, $inspect, #if en #each.
+De componenten worden gestyled dmv Tailwind.
+Screenshot van de werkende applicatie is ingeleverd.

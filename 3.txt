@@ -1,0 +1,82 @@
+Svelte - 03. Bindings, Stores & Forms
+Due November 28, 2025 12:00 PM
+Svelte (Laravel frontend)
+Instructions
+In deze opdracht leer je hoe je gegevens opslaat en deelt tussen componenten met behulp van writable stores. Daarnaast leer je formulieren op te bouwen in Svelte, inclusief het binden van inputvelden en het valideren van gebruikersinvoer.
+
+
+
+🎯 Leerdoelen
+
+Na deze opdracht:
+
+Kun je formulieren bouwen met validatie.
+
+
+📘 Samenvatting van de theorie
+Met bind: maak je een directe koppeling tussen een variabele en iets op je pagina — bijvoorbeeld een invoerveld. Als de gebruiker iets typt, verandert de variabele automatisch mee, en andersom.
+
+Private properties (#): Een eigenschap die begint met # is privé — dat betekent dat je die alleen binnen de code zelf kunt gebruiken, niet van buitenaf. Handig om dingen “af te schermen” die anderen niet mogen aanpassen.
+
+Een getter is een speciale manier om iets op te vragen uit een object of class, zonder dat het eruitziet als een functie.
+
+Een setter is het tegenovergestelde: die laat je iets instellen op een nette manier.
+
+Learn-omgeving.
+
+Door middel van de setters kun je validation toepassen: controleren of ingevoerde gegevens kloppen. Bijvoorbeeld: is een e-mailadres echt een e-mailadres? Is een leeftijd een getal? Zo voorkom je fouten of rare invoer van gebruikers.
+
+Svelte/store (met set en update) is een soort centrale opslagplek voor data die je overal in je app kunt gebruiken.
+
+set() → vervangt de waarde helemaal.
+
+update() → past de bestaande waarde een beetje aan.
+
+
+
+📝 Instructie – Learn omgeving
+
+Bestudeer en maak de hoofdstukken
+
+‘Bindings’ https://svelte.dev/tutorial/svelte/text-inputs
+‘Advanced reactivity’ van het deel ‘Advanced Svelte’ https://svelte.dev/tutorial/svelte/raw-state
+
+
+📝 Instructie – Praktijkopdracht
+
+Je gaat gebruik maken van bindings, writable stores en inputformulieren met validatie.
+
+
+
+Werk verder in je SVLT01 map uit de vorige opdracht.
+
+
+
+1. Maak een taskStore.js bestand in de map src/stores met een writable([]) store.
+
+2. Maak een component AddTask.svelte met een invoerveld (tekst) en een submit-knop.
+
+3. Valideer dat de invoer niet leeg is dmv een setter en private properties.
+
+4. Voeg taken toe aan de store via tasks.update(...) in taskStore.js.
+
+5. Maak een TaskList.svelte component die alle taken toont met behulp van {#each}.
+
+6. Voeg per taak een knop toe om deze te verwijderen uit de store.
+
+
+
+📤 Inleveren
+
+Screenshot van je voortgang in de tutorial.
+Screenshot van de werkende applicatie.
+Link naar de repository met daarin de uitwerking van de opdracht.
+
+
+✅ Voorwaarden
+
+Screenshot van je voortgang in de tutorial is ingeleverd en laat zien dat je de hoofdstukken Bindings en Advanced reactivity hebt afgerond.
+De opdracht is gepushed naar de repository.
+De gevraagde functionaliteiten zijn toegevoegd en worden correct geïmporteerd en gebruikt op de homepage.
+Er is gebruik gemaakt van Svelte store, validation dmv setters en private properties.
+Screenshot van de werkende applicatie is ingeleverd

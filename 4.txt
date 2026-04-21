@@ -1,0 +1,99 @@
+Svelte - 04. Routing & Backend
+Due December 5, 2025 12:00 PM
+Svelte (Laravel frontend)
+Instructions
+Deze week leer je hoe je meerdere pagina's aanmaakt in je applicatie met behulp van het routingsysteem van SvelteKit. Daarnaast leer je hoe je externe gegevens kunt ophalen uit een backend via fetch, en hoe je de opgehaalde data dynamisch toont met behulp van await-blokken en route-parameters zoals /afspraken/[id].
+
+
+
+SvelteKit is een belangrijk onderdeel van front-end ontwikkeling in Svelte. Het is belangrijk om de volledig tutorial te doorlopen!
+
+
+
+🎯 Leerdoelen
+
+Na deze opdracht:
+
+Kun je frontend (Svelte) en Backend (Node.js) koppelen via een eigen gemaakte API.
+
+
+📘 Samenvatting van de theorie
+
+SvelteKit is een app-framework (of “meta-framework”) bovenop Svelte, dat je helpt volledige webapps te bouwen, niet alleen losse componenten. Met SvelteKit krijg je direct tools voor: routing (pagina’s op basis van URL), server-side rendering (SSR), data ophalen.
+
+Projectstructuur: in een SvelteKit-project zie je mappen zoals src/routes/ waarin je pagina’s maakt, en configuratiebestanden zoals svelte.config.js. De eerste keer wordt een pagina geladen via server-rendering (goede SEO + snelle eerste laad-tijd), daarna navigeert de app client-side alsof het een Single Page App is.
+
+Routing: SvelteKit gebruikt filesystem-based routing:
+
+De naam van je map = de naam van je URL.
+Dynamische routes maak je met [blokhaken], bijvoorbeeld:
+/routes/blog/[id]/+page.svelte → /blog/1, /blog/2, enz.
+Je kunt +layout.svelte gebruiken om gedeelde onderdelen te tonen, zoals een menu of footer, die op elke pagina zichtbaar zijn.
+Load functions:
+
+De load()-functie in +page.ts haalt data op voordat de pagina wordt getoond.
+Je gebruikt fetch() om data van een API op te halen.
+Wat load() teruggeeft, is beschikbaar als data in je Svelte-component.
+
+📝 Instructie – Learn omgeving
+
+Bestudeer en maak het hoofdstuk ‘Basic SvelteKit’ volledig:
+
+https://svelte.dev/tutorial/kit/introducing-sveltekit.
+
+
+
+📝 Instructie – Praktijkopdracht
+
+Je bouwt een kleine SvelteKit-app waarmee je een overzicht van afspraken kunt bekijken.
+
+Elke afspraak heeft een detailpagina met extra informatie. De gegevens komen uit een backend (API-route in je project).
+
+
+
+Werk verder in je SVLT01 map uit de vorige opdracht.
+
+
+
+Stap 1: API maken
+
+1.        Maak een bestand src/routes/api/afspraken/+server.ts
+
+→ Dit bestand geeft een lijst met afspraken terug in JSON.
+
+2.        Maak ook een dynamische route src/routes/api/afspraken/[id]/+server.ts
+
+→ Deze geeft één afspraak terug op basis van het ID.
+
+
+
+Stap 2: Overzichtspagina maken
+
+Maak een route /afspraken met:
++page.ts → haalt alle afspraken op van /api/afspraken
++page.svelte → toont de lijst met afspraken
+Gebruik Tailwind om dit mooi op te maken met cards of lijstjes.
+
+
+Stap 3: Detailpagina maken
+
+Maak een map src/routes/afspraken/[id]/ met:
++page.ts →  haalt 1 afspraak op via /api/afspraken/[id]
++page.svelte →  toont de details (klant, datum, tijd, dienst)
+Voeg een knop "Terug naar overzicht" toe met een link naar /afspraken.
+
+
+📤 Inleveren
+
+Screenshot van je voortgang in de tutorial.
+Screenshot van de werkende applicatie.
+Link naar de repository met daarin de uitwerking van de opdracht.
+
+
+✅ Voorwaarden
+
+Screenshot van je voortgang in de tutorial is ingeleverd en laat zien dat je de hoofdstukken Bindings en Advanced reactivity hebt afgerond.
+De opdracht is gepushed naar de repository en een screenshot van de werkende applicatie is ingeleverd.
+De api is gerealiseerd voor alle afspraken en voor een enkele afspraak.
+De frontend is gerealiseerd voor de overzichtsweergave en de detailweergave.
+Er is gebruik gemaakt van SvelteKit en dynamic routes.

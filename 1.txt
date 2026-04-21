@@ -1,0 +1,92 @@
+Svelte - 01. Introductie & Componenten
+Due November 14, 2025 12:00 PM
+Svelte (Laravel frontend)
+Instructions
+In deze opdracht maak je kennis met de basis van Svelte: componenten, declaratieve syntax en styling. Je leert hoe je HTML, CSS en JS combineert binnen Svelte bestanden. Ook maak je kennis met herbruikbare onderdelen in een overzichtelijke structuur.
+
+
+🎯 Leerdoelen
+
+Na deze opdracht:
+
+Weet je hoe een Svelte project is opgebouwd.
+Weet je dat Svelte gebruik maakt van componenten met attributen.
+
+
+📘 Samenvatting van de theorie
+
+Svelte is een modern webframework waarmee je websites en webapps maakt — een beetje zoals React of Vue, maar met een groot verschil: In plaats van veel code te draaien in de browser, vertaalt (compileert) Svelte jouw code van tevoren naar supersnelle, gewone JavaScript.
+
+Daardoor is je website sneller, zijn de bestanden kleiner en schrijf je minder code.
+
+
+
+Je werkt met componenten — kleine bouwblokken met HTML, CSS en JavaScript in één bestand (.svelte). Als je iets aanpast in je data, past de gebruikersinterface zich automatisch aan — dat heet reactiviteit.
+
+
+
+📝 Instructie – Learn omgeving
+
+Bestudeer en maak het hoofdstuk ‘Introduction’. https://svelte.dev/tutorial/svelte/welcome-to-svelte t/m https://svelte.dev/tutorial/svelte/html-tags
+
+
+
+📝 Instructie – Praktijkopdracht
+
+Je zet het Svelte project op en voegt de eerste herbruikbare componenten toe. Je gebruikt Tailwind om de componenten te stylen.
+
+
+
+1.        Maak een git repo aan via https://classroom.github.com/a/aV5b9L4e
+
+2.        Maak een nieuw Svelte-project
+
+npx sv create
+
+SvelteKit minimal
+
+Typescript
+
+Add: prettier, eslint, tailwindcss
+
+Tailwind: typography and forms
+
+Package manager: npm
+
+
+
+3.        Start het project
+
+npm run dev -- --open
+
+
+
+4.        Maak een component  Welcome.svelte in src/lib/components
+
+Toon het component op de homepage (routes/page.svelte)
+5.        Maak een component InfoCard.svelte met een stukje uitleg over jezelf of je huisdier.
+
+Toon het component op de homepage
+Gebruik hierbij styling dmv Tailwind
+
+
+📤 Inleveren
+
+Screenshot van je voortgang in de tutorial.
+Screenshot van de werkende applicatie.
+Link naar de repository met daarin de uitwerking van de opdracht.
+
+
+✅ Voorwaarden
+
+Screenshot van je voortgang in de tutorial is ingeleverd en laat zien dat je het hoofdstuk Introduction hebt afgerond.
+De repository is gecloned en de opdracht is gepusht.
+Het project SVLT01 is succesvol aangemaakt en draait lokaal.
+De twee gevraagde componenten zijn toegevoegd en worden correct geïmporteerd en gebruikt op de homepage.
+De componenten worden gestyled dmv Tailwind.
+Screenshot van de werkende applicatie is ingeleverd
+
+
+📚 Bronnen
+
+https://svelte.dev/tutorial/
